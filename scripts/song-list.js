@@ -10,7 +10,7 @@
           </button>
         </td>
         <td>${song.title}</td>
-        <td>${(song.duration /60).toFixed(2)}</td>
+        <td>${(song.duration}</td>
       </tr>
     `);
     song.element.on('click', event => {
