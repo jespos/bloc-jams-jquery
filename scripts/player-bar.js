@@ -24,9 +24,13 @@
     const previousSong = album.songs[previousSongIndex];
     player.playPause(previousSong);
   });
+
   $('#time-control input').on('input', function(event){ //why event here and not the other event handlers?
     player.skipTo(event.target.value); //where did 'event.target' and 'event.target.value' come from?
+  });
 
+  $('#volume-control input').on('input', function(event){
+    player.setVolume(event.target.value);
   });
 
   setInterval( () => { //confused as to why this is written this way
